@@ -1,0 +1,26 @@
+@import 'src/styles/mixins.scss';
+
+.children {
+  flex: 1;
+  background-color: #cdccff33;
+  padding: 35px 26px;
+  border-radius: 5px;
+  height: fit-content;
+
+  div {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    height: fit-content;
+
+    span {
+      margin-top: 5px;
+      margin-right: 10px;
+      color: var(--blue);
+    }
+
+    p {
+      font-weight: bold;
+    }
+  }
+}

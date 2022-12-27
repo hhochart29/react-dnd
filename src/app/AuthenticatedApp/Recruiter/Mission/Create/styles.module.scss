@@ -1,0 +1,52 @@
+@import 'src/styles/mixins.scss';
+
+.steps {
+  max-width: 200px;
+  position: absolute;
+  left: -75px;
+  top: 0;
+  transform: translateX(-100%);
+}
+
+.stepsContainer {
+  display: flex;
+  position: relative;
+  margin-left: rem(300);
+  margin-top: rem(100);
+
+  :global(.ant-steps) {
+    width: auto;
+    margin-right: rem(45);
+    margin-top: rem(20);
+  }
+
+  :global(.ant-steps-item-active),
+  :global(.ant-steps-item-finish) {
+    :global(.ant-steps-icon-dot) {
+      background-color: var(--blue) !important;
+    }
+
+    :global(.ant-steps-item-description) {
+      font-weight: bold;
+    }
+  }
+
+  :global(.ant-steps-item-finish) {
+    :global(.ant-steps-item-tail::after) {
+      background-color: var(--blue) !important;
+    }
+  }
+
+  h2 {
+    font-size: rem(24);
+    font-weight: bold;
+    color: black;
+    margin-top: rem(-50);
+    margin-bottom: rem(30);
+  }
+
+  h3 {
+    font-size: rem(16);
+    color: var(--gray-dark);
+  }
+}

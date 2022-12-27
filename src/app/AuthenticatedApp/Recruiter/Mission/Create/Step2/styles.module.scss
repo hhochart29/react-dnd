@@ -1,0 +1,39 @@
+@import 'src/styles/mixins.scss';
+
+.page {
+  display: flex;
+
+  > div:first-child {
+    & > p,
+    h1 {
+      margin-right: 90px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .children {
+    flex: 1;
+  }
+}
+
+.info {
+  color: var(--blue);
+  font-size: rem(44);
+  font-weight: bold;
+}
+
+span {
+  font-weight: bold;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+p {
+  line-height: 24px;
+}
+
+.submitWrapper {
+  margin-top: rem(20);
+}

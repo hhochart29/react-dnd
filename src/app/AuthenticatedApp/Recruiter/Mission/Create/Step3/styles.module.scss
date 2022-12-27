@@ -1,0 +1,12 @@
+@import 'src/styles/mixins.scss';
+
+.description {
+  font-weight: bold;
+  color: black;
+  font-weight: rem(16);
+  max-width: 400px;
+}
+
+.button {
+  margin-top: rem(20);
+}

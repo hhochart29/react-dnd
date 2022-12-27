@@ -1,0 +1,42 @@
+@import 'src/styles/mixins.scss';
+
+.form {
+  padding: rem(25);
+
+  h1 {
+    text-align: center;
+    font-size: rem(23);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  p {
+    font-size: rem(15);
+    color: var(--grey);
+    text-align: center;
+    padding: rem(0) rem(15);
+    border-bottom: none !important;
+  }
+
+  > * + * {
+    margin-top: rem(25);
+  }
+}
+
+.buttonsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > * + * {
+    margin-left: rem(25);
+  }
+}
+
+.underline {
+  > span {
+    text-decoration: underline;
+  }
+}

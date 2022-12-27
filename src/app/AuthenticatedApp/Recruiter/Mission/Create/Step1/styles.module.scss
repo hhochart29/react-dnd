@@ -1,0 +1,30 @@
+@import 'src/styles/mixins.scss';
+
+.formWrapper {
+  > div {
+    margin-top: rem(20);
+  }
+}
+
+.buttonWrapper {
+  p {
+    color: var(--blue);
+    margin-bottom: rem(10);
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.button {
+  color: #acacac !important;
+  border-color: #acacac !important;
+}
+
+div.submitWrapper {
+  margin-top: rem(30);
+  text-align: center;
+}

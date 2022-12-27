@@ -1,0 +1,88 @@
+@import 'src/styles/mixins.scss';
+
+.wrapper {
+  display: flex;
+  border-radius: rem(5);
+  border: 1px solid #d4d4d4;
+  padding: rem(10);
+  background-color: #fff;
+  margin-top: rem(8);
+  cursor: grab;
+  align-items: center;
+}
+
+.information {
+  display: flex;
+  min-width: 1px;
+  @media (max-width: 1250px) {
+    flex-wrap: wrap;
+  }
+}
+
+.userWrapper {
+  display: flex;
+  flex-shrink: 1;
+  min-width: 1px;
+}
+
+.userInformation {
+  flex-shrink: 1;
+  margin-right: rem(15);
+  min-width: 0;
+
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: black;
+    font-weight: bold;
+    font-size: rem(16);
+  }
+
+  span {
+    color: #acacac;
+    font-size: rem(12);
+  }
+}
+
+.avatar {
+  flex-shrink: 0;
+}
+
+.note {
+  flex-shrink: 0;
+  margin-right: rem(10);
+
+  @media (max-width: 1250px) {
+    display: flex;
+    align-items: center;
+    margin-left: rem(43);
+    > * + * {
+      margin-left: 5px;
+    }
+  }
+
+  p {
+    color: var(--blue);
+    font-size: rem(12);
+  }
+
+  .bulletWrapper {
+    display: flex;
+
+    > div {
+      margin-right: rem(3);
+    }
+  }
+}
+
+.delete {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  svg {
+    font-size: rem(20);
+  }
+}

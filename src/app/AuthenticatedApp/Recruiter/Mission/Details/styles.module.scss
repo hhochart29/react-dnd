@@ -1,0 +1,120 @@
+@import 'src/styles/mixins.scss';
+
+.wrapper {
+  margin-top: rem(40);
+
+  :global(.ant-col:last-of-type .smooth-dnd-draggable-wrapper > div) {
+    cursor: default;
+  }
+}
+
+:global(.smooth-dnd-drop-preview-constant-class) > div > div {
+  min-width: 100% !important;
+}
+
+:global(.column-drag-handle) {
+  cursor: move;
+  padding: 5px;
+}
+
+:global(.drop-preview) {
+  background-color: rgba(150, 150, 200, 0.1);
+  border: 1px dashed #abc;
+  margin: 5px;
+}
+
+:global(.cards-drop-preview) {
+  border-radius: 3px;
+  background-color: rgba(150, 150, 200, 0.1);
+  border: 1px dashed #abc;
+  margin: 5px 0;
+}
+
+:global(.card-ghost) {
+  transition: transform 0.18s ease;
+  transform: rotateZ(5deg);
+}
+
+:global(.card-ghost-drop) {
+  transition: transform 0.18s ease-in-out;
+  transform: rotateZ(0deg);
+}
+
+.missionWrapper {
+  display: flex;
+  margin-top: rem(10);
+}
+
+.link {
+  color: var(--blue);
+  margin-left: rem(20);
+
+  span {
+    text-decoration: underline;
+  }
+}
+
+.header {
+  margin-top: rem(20);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  div {
+    h1 {
+      font-weight: 600;
+      font-size: rem(40);
+    }
+  }
+}
+
+.action {
+  margin-top: rem(15);
+
+  button:not(:last-child) {
+    margin-right: rem(10);
+  }
+}
+
+.modalList {
+  :global(.ant-modal-close-x) {
+    display: none;
+  }
+
+  span {
+    font-size: rem(17);
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      cursor: inherit !important;
+    }
+  }
+
+  .cancel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      margin: 0;
+    }
+
+    padding: rem(10) 0;
+  }
+}
+
+.jobDescriptionModal {
+  :global(.ant-modal-close-x) {
+    color: var(--blue);
+  }
+
+  :global(.ant-modal-body) {
+    height: rem(700);
+    overflow-y: scroll;
+  }
+}
